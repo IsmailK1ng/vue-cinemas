@@ -32,6 +32,30 @@ body {
   background: var(--body);
 }
 
+.btn {
+  width: 166px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  text-align: justify;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 75%;
+  transition: 500ms linear;
+  background: var(--hoverBtn);
+  box-shadow: 5px 5px 10px 0 var(--btnColor);
+  color: #000;
+}
+
+.btn:hover {
+  color: #FFF;
+  background: var(--btnColor);
+  box-shadow: 5px 5px 10px 0 var(--hoverBtn);
+}
+
 .container {
   max-width: 1143px;
   width: 100%;
@@ -71,21 +95,13 @@ body {
 }
 
 .menu:focus span:nth-child(1) {
-  transform: 
-  rotate(45deg) 
-  translateY(-16px)  
-  translateY(25px) 
-  translateX(31px) 
-  translateX(-22px);
+  transform:
+    rotate(45deg) translateY(-16px) translateY(25px) translateX(31px) translateX(-22px);
 }
 
 .menu:focus span:nth-child(3) {
-  transform: 
-  rotate(-45deg) 
-  translateY(16px)  
-  translateY(-25px) 
-  translateX(31px) 
-  translateX(-22px);
+  transform:
+    rotate(-45deg) translateY(16px) translateY(-25px) translateX(31px) translateX(-22px);
 }
 
 .ads {
@@ -103,6 +119,12 @@ body {
   font-weight: 400;
   max-width: 166px;
   width: 100%;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .header__nav {
@@ -168,4 +190,66 @@ body {
 .header__link:hover::after {
   width: 100%;
   left: 0;
+}
+
+.banner {
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+
+.banner::after {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 15, 25, 0.75);
+  z-index: -1;
+}
+
+.banner .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner__img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+
+.banner__title {
+  color: #FFF;
+  font-family: 'Montserrat';
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 65px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+
+.banner__desc {
+  color: #C8C8C8;
+  text-align: justify;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  max-width: 570px;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.banner__btns {
+  display: flex;
+  column-gap: 30px;
 }
