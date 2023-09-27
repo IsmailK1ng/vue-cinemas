@@ -88,6 +88,23 @@
     align-items: center;
   }
   
+  .video {
+    padding: 0;
+  }
+  
+  .video .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+  }
+  
+  .video__logo {
+    max-width: 445px;
+    width: 100%;
+  }
+  
 }
 @media (max-width: 576px){
   .container {
